@@ -4,14 +4,9 @@ const [addNums, addManyNums] = require("./phase-1");
 function addNums10(increment) {
   // Fill this in
   let sumArray = [];
-  for (let i = 0; i <= 9; i++){
-    let incrementMethod;
-    if (increment === 1) {
-      incrementMethod = increment + i;
-    } else {
-      incrementMethod = increment + (i * 10);
-    }
-    sumArray.push(addNums(incrementMethod));
+  for (let i = 1; i <= 10; i++){
+    let num = addNums(i * increment);
+    sumArray.push(num);
   }
   return sumArray;
 }
@@ -21,15 +16,9 @@ function addManyNums10(increment) {
   // Fill this in
   let sumArray = [];
 
-  for (let i = 0; i <= 9; i++){
-    let incrementMethod;
-    if (increment === 1) {
-      incrementMethod = increment + i;
-    } else {
-      incrementMethod = increment + (i * 10);
-    }
-
-    sumArray.push(addManyNums(incrementMethod));
+  for (let i = 1; i <= 10; i++){
+    let num = addManyNums(i * increment);
+    sumArray.push(num);
   }
   return sumArray;
 
